@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar with Dropdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation bar container */
+    .navbar {
+      display: flex;
+      background-color: #333;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Navigation buttons */
+    .nav-item {
+      position: relative;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .nav-item:hover {
+      background-color: #575757;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      display: none; /* Hidden by default */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 150px;
+      z-index: 1000;
+    }
+
+    /* Dropdown items */
+    .dropdown .dropdown-item {
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown .dropdown-item:hover {
+      background-color: #575757;
+    }
+
+    /* Show dropdown on hover */
+    .nav-item:hover > .dropdown {
+      display: block; /* Show the dropdown */
+    }
+
+    /* Sub-dropdown styling */
+    .sub-dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #555;
+      min-width: 150px;
+    }
+
+    /* Show sub-dropdown on hover */
+    .dropdown-item:hover > .sub-dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-item">
+      Home
+      <div class="dropdown">
+        <a href="#" class="dropdown-item">Test1
+          <div class="sub-dropdown">
+            <a href="#" class="dropdown-item">Test1 Level 2</a>
+            <a href="#" class="dropdown-item">Test2 Level 2</a>
+          </div>
+        </a>
+        <a href="#" class="dropdown-item">Test2</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      Kubernetes
+      <div class="dropdown">
+        <a href="#" class="dropdown-item">Test1
+          <div class="sub-dropdown">
+            <a href="#" class="dropdown-item">Test1 Level 2</a>
+            <a href="#" class="dropdown-item">Test2 Level 2</a>
+          </div>
+        </a>
+        <a href="#" class="dropdown-item">Test2</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      GKE
+      <div class="dropdown">
+        <a href="#" class="dropdown-item">Test1
+          <div class="sub-dropdown">
+            <a href="#" class="dropdown-item">Test1 Level 2</a>
+            <a href="#" class="dropdown-item">Test2 Level 2</a>
+          </div>
+        </a>
+        <a href="#" class="dropdown-item">Test2</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
