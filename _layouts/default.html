@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
-    <!-- Add custom CSS for navigation bar -->
     <style>
       .navbar {
         display: flex;
         background-color: #333;
         padding: 0;
+        border-radius: 8px;
       }
 
       .nav-item {
@@ -27,6 +27,7 @@
         text-decoration: none;
         text-align: center;
         cursor: pointer;
+        border-radius: 8px;
       }
 
       .nav-item:hover {
@@ -41,6 +42,7 @@
         background-color: #444;
         min-width: 150px;
         z-index: 1000;
+        border-radius: 8px;
       }
 
       .dropdown .dropdown-item {
@@ -48,6 +50,8 @@
         color: white;
         text-decoration: none;
         display: block;
+        position: relative;
+        border-radius: 8px;
       }
 
       .dropdown .dropdown-item:hover {
@@ -60,13 +64,15 @@
         top: 0;
         left: 100%;
         background-color: #555;
+        min-width: 150px;
+        border-radius: 8px;
       }
 
       .nav-item:hover > .dropdown {
         display: block;
       }
 
-      .dropdown-item:hover > .sub-dropdown {
+      .dropdown-item:hover .sub-dropdown {
         display: block;
       }
     </style>
@@ -85,41 +91,29 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
 
-      <!-- Navigation Bar -->
       <div class="navbar">
-        <div class="nav-item">
-          Home
-          <div class="dropdown">
-            <a href="#" class="dropdown-item">Test1
-              <div class="sub-dropdown">
-                <a href="#" class="dropdown-item">Test1 Level 2</a>
-                <a href="#" class="dropdown-item">Test2 Level 2</a>
-              </div>
-            </a>
-            <a href="#" class="dropdown-item">Test2</a>
-          </div>
-        </div>
+        <a href="https://www.google.com" class="nav-item">Home</a>
         <div class="nav-item">
           Kubernetes
           <div class="dropdown">
-            <a href="#" class="dropdown-item">Test1
+            <div class="dropdown-item">Test1
               <div class="sub-dropdown">
                 <a href="#" class="dropdown-item">Test1 Level 2</a>
                 <a href="#" class="dropdown-item">Test2 Level 2</a>
               </div>
-            </a>
+            </div>
             <a href="#" class="dropdown-item">Test2</a>
           </div>
         </div>
         <div class="nav-item">
           GKE
           <div class="dropdown">
-            <a href="#" class="dropdown-item">Test1
+            <div class="dropdown-item">Test1
               <div class="sub-dropdown">
                 <a href="#" class="dropdown-item">Test1 Level 2</a>
                 <a href="#" class="dropdown-item">Test2 Level 2</a>
               </div>
-            </a>
+            </div>
             <a href="#" class="dropdown-item">Test2</a>
           </div>
         </div>
