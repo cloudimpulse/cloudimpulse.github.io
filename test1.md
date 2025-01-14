@@ -1,3 +1,8 @@
+---
+layout: default
+title: test page
+---
+
 # check the heading
 now the contect
 is it visible in the site.
