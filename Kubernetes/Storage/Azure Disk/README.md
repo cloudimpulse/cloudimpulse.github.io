@@ -1,7 +1,3 @@
----
-layout: default
-title: K8S Basics
----
 ### heading 1
 >block code
 how about normal text
