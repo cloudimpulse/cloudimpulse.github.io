@@ -1,6 +1,5 @@
 ---
 layout: default
-title: test page
 ---
 
 # check the heading
